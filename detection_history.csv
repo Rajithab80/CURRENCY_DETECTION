@@ -1,0 +1,137 @@
+Timestamp,Filename,Prediction,Confidence,Status,Reason
+2025-10-20 12:28:48,13.jpg,50_real,1.00,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 12:29:33,40.jpg,2000_real,1.00,Real,"The ₹2000 note is real — watermark, optical ink, microtext correct."
+2025-10-20 12:30:26,aug_132_WhatsApp Image 2025-04-05 at 10.55.44.jpeg,200_fake,0.55,Fake,The ₹200 note is fake — security thread alignment inconsistent.
+2025-10-20 12:31:04,23.jpg,20_real,0.75,Real,"The ₹20 note is real — color tone, micro-lettering, verified."
+2025-10-20 12:32:28,aug_153_WhatsApp Image 2025-04-05 at 10.59.20 (1).jpeg,100_fake,1.00,Fake,The ₹100 note is fake — Gandhi portrait and color contrast deviate.
+2025-10-20 12:33:39,aug_359_WhatsApp Image 2025-04-05 at 10.48.47.jpeg,10_fake,0.79,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 12:34:28,aug_358_WhatsApp Image 2025-04-05 at 10.48.47.jpeg,10_fake,1.00,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 12:35:16,10.jpg,50_real,1.00,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 12:39:59,0.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 12:42:57,10.jpg,50_real,1.00,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 12:46:24,10.jpg,50_real,1.00,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 12:47:09,44.jpg,2000_real,1.00,Real,"The ₹2000 note is real — watermark, optical ink, microtext correct."
+2025-10-20 12:49:40,1 (35).jpg,500_fake,1.00,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 12:55:31,9.jpg,50_real,0.99,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 12:56:16,21.jpg,20_real,0.99,Real,"The ₹20 note is real — color tone, micro-lettering, verified."
+2025-10-20 13:11:03,63.jpg,50_fake,0.89,Fake,The ₹50 note is fake — holographic strip and microtext mismatch.
+2025-10-20 13:12:17,1 (27).jpg,500_real,0.86,Real,The ₹500 note is real — optical ink verified.
+2025-10-20 13:22:51,0.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:05,20251020132305.png,500_fake,0.33,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:06,20251020132306.png,100_real,0.51,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:06,20251020132306.png,100_real,0.60,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:07,20251020132307.png,100_real,0.63,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:07,20251020132307.png,100_real,0.62,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:08,20251020132308.png,100_real,0.66,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:08,20251020132308.png,100_real,0.64,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:09,20251020132309.png,100_real,0.75,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:09,20251020132309.png,100_real,0.78,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:09,20251020132309.png,100_real,0.75,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:10,20251020132310.png,100_real,0.76,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:10,20251020132310.png,100_real,0.70,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:11,20251020132311.png,100_real,0.72,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:11,20251020132311.png,100_real,0.77,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:12,20251020132312.png,100_real,0.72,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:12,20251020132312.png,100_real,0.75,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:13,20251020132313.png,100_real,0.77,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:13,20251020132313.png,100_real,0.81,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:13,20251020132313.png,100_real,0.80,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:14,20251020132314.png,100_real,0.79,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:14,20251020132314.png,100_real,0.77,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:15,20251020132315.png,100_real,0.77,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:15,20251020132315.png,100_real,0.65,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:16,20251020132316.png,100_real,0.60,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:17,20251020132317.png,500_fake,0.48,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:17,20251020132317.png,100_real,0.47,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:18,20251020132318.png,500_fake,0.58,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:19,20251020132319.png,500_fake,0.53,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:19,20251020132319.png,500_fake,0.46,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:19,20251020132319.png,100_real,0.55,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:20,20251020132320.png,100_real,0.73,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:20,20251020132320.png,100_real,0.70,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:21,20251020132321.png,100_real,0.68,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:21,20251020132321.png,100_real,0.78,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:22,20251020132322.png,100_real,0.83,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:22,20251020132322.png,100_real,0.82,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:23,20251020132323.png,100_real,0.85,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:23,20251020132323.png,100_real,0.87,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:24,20251020132324.png,100_real,0.89,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:24,20251020132324.png,100_real,0.89,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:25,20251020132325.png,100_real,0.88,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:25,20251020132325.png,100_real,0.88,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:25,20251020132325.png,100_real,0.89,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:26,20251020132326.png,100_real,0.88,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:26,20251020132326.png,100_real,0.88,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:27,20251020132327.png,100_real,0.78,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:28,20251020132328.png,100_real,0.72,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:28,20251020132328.png,100_real,0.72,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:29,20251020132329.png,100_real,0.77,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:29,20251020132329.png,100_real,0.74,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:30,20251020132330.png,100_real,0.72,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:30,20251020132330.png,100_real,0.75,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:31,20251020132331.png,100_real,0.40,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:31,20251020132331.png,500_fake,0.53,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:31,20251020132331.png,500_fake,0.56,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:23:32,20251020132332.png,100_real,0.39,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:23:32,20251020132332.png,10_real,1.00,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:23:33,20251020132333.png,10_real,0.58,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:23:33,20251020132333.png,10_real,0.79,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:23:34,20251020132334.png,10_fake,0.93,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 13:23:34,20251020132334.png,200_fake,0.42,Fake,The ₹200 note is fake — security thread alignment inconsistent.
+2025-10-20 13:23:35,20251020132335.png,200_fake,0.57,Fake,The ₹200 note is fake — security thread alignment inconsistent.
+2025-10-20 13:23:36,20251020132336.png,10_fake,0.42,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 13:23:36,20251020132336.png,10_fake,0.98,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 13:23:37,20251020132337.png,10_fake,0.97,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 13:24:28,20251020132428.png,50_fake,0.67,Fake,The ₹50 note is fake — holographic strip and microtext mismatch.
+2025-10-20 13:24:28,20251020132428.png,500_fake,0.44,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:24:29,20251020132429.png,500_fake,0.67,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:24:29,20251020132429.png,100_real,0.70,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:24:30,20251020132430.png,100_real,0.80,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:24:30,20251020132430.png,500_fake,0.56,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:24:31,20251020132430.png,500_fake,0.60,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 13:24:31,20251020132431.png,100_real,0.68,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:24:31,20251020132431.png,100_real,0.78,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 13:24:32,20251020132432.png,10_real,0.79,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:24:32,20251020132432.png,10_real,0.93,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:24:32,20251020132432.png,10_real,0.76,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:24:33,20251020132433.png,50_real,0.92,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 13:24:33,20251020132433.png,10_real,0.88,Real,"The ₹10 note is real — watermark, texture, and serial number correct."
+2025-10-20 13:24:34,20251020132434.png,100_fake,0.44,Fake,The ₹100 note is fake — Gandhi portrait and color contrast deviate.
+2025-10-20 13:24:34,20251020132434.png,10_fake,0.98,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 13:24:35,20251020132435.png,10_fake,0.98,Fake,The ₹10 note is fake due to mismatched watermark or incorrect texture pattern.
+2025-10-20 13:26:58,16.jpg,50_real,1.00,Real,The ₹50 note is real — hologram and print quality correct.
+2025-10-20 14:10:57,1 (28).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-20 15:12:17,1 (27).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-20 15:14:26,1 (29).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-20 15:18:20,21.jpg,20_real,0.99,Real,"The ₹20 note is real — color tone, micro-lettering, verified."
+2025-10-20 15:25:57,1 (28).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-20 15:32:32,IMG_1667849622714.jpg,200_real,0.51,Real,The ₹200 note is real — watermark alignment correct.
+2025-10-20 15:36:03,1.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-20 15:41:41,1 (89).jpg,500_fake,1.00,Fake,The ₹500 note is fake — optical ink differs.
+2025-10-20 15:54:44,1 (42).jpg,2000_fake,1.00,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-10-20 16:06:34,1 (54).jpg,2000_fake,1.00,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-10-20 16:54:38,0.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-30 13:04:22,1 (40).jpg,2000_fake,1.00,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-10-30 13:23:32,1 (46).jpg,2000_fake,0.99,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-10-30 15:14:23,0.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-30 15:19:28,35.jpg,2000_real,0.97,Real,"The ₹2000 note is real — watermark, optical ink, microtext correct."
+2025-10-30 15:57:35,1 (48).jpg,2000_fake,0.99,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-10-30 16:29:22,1 (19).jpg,500_real,0.63,Real,The ₹500 note is real — optical ink verified.
+2025-10-30 16:39:47,1 (40).jpg,2000_fake,1.00,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-10-30 16:52:43,6.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-10-31 12:42:47,1 (27).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-31 12:45:04,1 (29).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-31 12:45:14,1 (27).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-10-31 12:46:57,1 (27).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-11-05 21:24:02,1 (89).jpg,500_fake,1.00,Fake,The ₹500 note is fake — optical ink differs.
+2025-11-13 14:29:54,1 (27).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-11-17 18:45:49,1 (51).jpg,2000_fake,1.00,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-11-17 18:51:38,16.jpg,50_real,1.00,Real,The ₹50 note is real — hologram and print quality correct.
+2025-11-17 18:53:02,1 (27).jpg,500_real,0.94,Real,The ₹500 note is real — optical ink verified.
+2025-11-20 13:02:25,1 (19).jpg,500_real,0.63,Real,The ₹500 note is real — optical ink verified.
+2025-11-20 13:09:52,1 (24).jpg,500_fake,0.95,Fake,The ₹500 note is fake — optical ink differs.
+2025-11-21 10:38:36,0.jpg,100_real,1.00,Real,The ₹100 note is real — Gandhi portrait clarity correct.
+2025-11-23 18:04:45,1 (82).jpg,500_fake,1.00,Fake,The ₹500 note is fake — optical ink differs.
+2025-11-23 18:21:37,1 (28).jpg,500_fake,1.00,Fake,The ₹500 note is fake — optical ink differs.
+2025-12-09 20:14:05,1 (43).jpg,2000_fake,1.00,Fake,The ₹2000 note is fake — print quality not authentic.
+2025-12-10 15:46:46,1 (28).jpg,500_fake,1.00,Fake,The ₹500 note is fake — optical ink differs.

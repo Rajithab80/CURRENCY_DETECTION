@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection Graph</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <style>
+        body{
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), 
+                                url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                    background-size: cover;
+                    background-attachment: fixed;
+                    background-position: center;
+        }
+
+        .container{
+
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered" style="color: aliceblue;">{{ msg }}</h1>
+
+        {% if graph %}
+        <figure class="image">
+            <img src="{{ graph }}" alt="Detection Graph">
+        </figure>
+        <p style="color: aliceblue;">Real Notes: {{ real_count }}, Fake Notes: {{ fake_count }}</p>
+        {% else %}
+        <p>No data available to generate graph.</p>
+        {% endif %}
+
+        <a href="/" class="button is-link">Home</a>
+        <a href="/history" class="button is-info">View History</a>
+    </div>
+</section>
+</body>
+</html>

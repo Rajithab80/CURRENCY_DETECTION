@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Counterfeit Currency Detection System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.js" integrity="sha512-o4gKX6jcK0rdciOZ9X8COYkV9gviTJAbYEVW8aC3OgIRuaKDmcT9/OFXBVzHSSOxiTjsTktqrUvCUrHkQHSn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      min-height: 100vh;
+    }
+    
+    .navbar {
+      border-radius: 0;
+      margin-bottom: 0;
+      background-color: rgba(0, 30, 60, 0.95);
+      border: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 22px;
+      color: #fff !important;
+    }
+    
+    .navbar-nav li a {
+      color: #fff !important;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    
+    .navbar-nav li a:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: #4dabf7 !important;
+    }
+    
+    .container {
+      padding: 40px 15px;
+      max-width: 800px;
+    }
+    
+    .form-container {
+      background-color: rgba(0, 30, 60, 0.85);
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+      margin: 20px auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
+      transform: translateY(0);
+      opacity: 1;
+      display: none; /* Hide all forms by default */
+    }
+    
+    .form-container.active {
+      display: block; /* Show only the active form */
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .form-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4dabf7;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .form-group label {
+      font-weight: 500;
+      color: #e9ecef;
+    }
+    
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border-radius: 4px;
+      padding: 10px 15px;
+      transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-color: #4dabf7;
+      box-shadow: 0 0 0 0.2rem rgba(77, 171, 247, 0.25);
+      color: #fff;
+    }
+    
+    .btn-primary {
+      background-color: #4dabf7;
+      border-color: #339af0;
+      padding: 10px 30px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+    
+    .btn-primary:hover {
+      background-color: #339af0;
+      border-color: #4dabf7;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #adb5bd;
+    }
+    
+    .form-footer a {
+      color: #4dabf7;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    
+    .form-footer a:hover {
+      color: #74c0fc;
+      text-decoration: underline;
+    }
+    
+    .alert {
+      border-radius: 4px;
+      border: none;
+    }
+    
+    .alert-warning {
+      background-color: rgba(255, 193, 7, 0.2);
+      color: #ffc107;
+    }
+    
+    .feature-icon {
+      font-size: 40px;
+      color: #4dabf7;
+      margin-bottom: 15px;
+    }
+    
+    .feature-box {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      margin: 10px 0;
+      transition: all 0.3s;
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .welcome-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    .welcome-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .welcome-subtitle {
+      font-size: 18px;
+      color: #adb5bd;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 10px;
+      }
+      
+      .form-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" data-value="#home" onclick="toggleForm(event)">
+          <i class="fa fa-money"></i> CURRENCY DETECTION
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a data-value="#home" onclick="toggleForm(event)"><i class="fa fa-home"></i> Home</a></li>
+          <li><a data-value="#form1" onclick="toggleForm(event)"><i class="fa fa-sign-in"></i> Login</a></li>
+          <li><a data-value="#form2" onclick="toggleForm(event)"><i class="fa fa-user-plus"></i> Register</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
+          <li><a href="#"><i class="fa fa-phone"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    {% if msg %}
+    <div class="alert alert-warning alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Notice:</strong> {{msg}}
+    </div>
+    {% endif %}
+    
+    <div id="home" class="form-container active">
+      <div class="welcome-section">
+        <h1 class="welcome-title">Counterfeit Currency Detection System</h1>
+        <p class="welcome-subtitle">
+          Advanced AI-powered solution for detecting counterfeit banknotes with high accuracy. 
+          Protect your business from financial fraud with our cutting-edge technology.
+        </p>
+        
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fa fa-shield"></i>
+              </div>
+              <h4>Secure Detection</h4>
+              <p>Advanced algorithms to identify counterfeit notes with precision</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fa fa-bolt"></i>
+              </div>
+              <h4>Fast Analysis</h4>
+              <p>Real-time detection with results in seconds</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fa fa-globe"></i>
+              </div>
+              <h4>Multi-Currency</h4>
+              <p>Supports detection for various global currencies</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 40px;">
+          <a data-value="#form1" onclick="toggleForm(event)" class="btn btn-primary" style="margin-right: 15px;">
+            <i class="fa fa-sign-in"></i> User Login
+          </a>
+          <a data-value="#form2" onclick="toggleForm(event)" class="btn btn-primary">
+            <i class="fa fa-user-plus"></i> Create Account
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <form method="post" action="{{ url_for('userlog') }}" id="form1" class="form-container">
+      <h2 class="form-title"><i class="fa fa-sign-in"></i> User Login</h2>
+      <hr style="border-color: rgba(255,255,255,0.1);">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+      <div class="form-footer">
+        <p>Don't have an account? <a data-value="#form2" onclick="toggleForm(event)">Register here</a></p>
+      </div>
+    </form>
+
+    <form method="post" action="{{ url_for('userreg') }}" id="form2" class="form-container">
+      <h2 class="form-title"><i class="fa fa-user-plus"></i> User Registration</h2>
+      <hr style="border-color: rgba(255,255,255,0.1);">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Choose a username" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile No.:</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Create a password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+      <div class="form-footer">
+        <p>Already have an account? <a data-value="#form1" onclick="toggleForm(event)">Login here</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function toggleForm(e) {
+      // Prevent default behavior for anchor tags
+      if (e.target.tagName === 'A') {
+        e.preventDefault();
+      }
+      
+      var targetId = e.target.getAttribute('data-value');
+      var formIds = ['#home', '#form1', '#form2'];
+      
+      // Hide all forms
+      formIds.forEach(function(id) {
+        $(id).removeClass("active");
+      });
+      
+      // Show the selected form
+      $(targetId).addClass("active");
+      
+      // Update active state in navbar
+      $('.navbar-nav li').removeClass('active');
+      $(e.target).closest('li').addClass('active');
+      
+      // Scroll to top of the form
+      $('html, body').animate({
+        scrollTop: $(".container").offset().top
+      }, 500);
+    }
+    
+    // Set home as default active page
+    $(document).ready(function() {
+      $('.navbar-nav li:first-child').addClass('active');
+      $('#home').addClass('active');
+    });
+  </script>
+</body>
+</html>

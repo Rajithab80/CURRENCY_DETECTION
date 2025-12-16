@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+</head>
+<body>
+<h2>Status: {{ status }}</h2>
+<p>Reason: {{ reason }}</p>
+<p>Confidence: {{ accuracy }}</p>
+<img src="{{ image }}" width="300"><br>
+
+{% if graph %}
+<h3>Detection Summary Graph</h3>
+<img src="{{ graph }}" width="500">
+{% endif %}
+
+<h3>Listen in Multiple Languages:</h3>
+<form action="/play_audio" method="post">
+    <input type="hidden" name="status" value="{{ status }}">
+    <input type="hidden" name="reason" value="{{ reason }}">
+    <input type="hidden" name="accuracy" value="{{ accuracy }}">
+     <button type="submit" name="lang" value="kn">Kannada</button>
+    <button type="submit" name="lang" value="en">English</button>
+    <button type="submit" name="lang" value="hi">Hindi</button>
+    <button type="submit" name="lang" value="ta">Tamil</button>
+    <button type="submit" name="lang" value="ml">Malayalam</button>
+</form>
+
+<audio id="audio_player" controls autoplay>
+  <source src="{{ audio }}" type="audio/mpeg">
+</audio>
+
+<br><br>
+<a href="/">Back</a> | <a href="/history">History</a> | <a href="/graph">Graph</a>
+<a href="/">Back</a> | <a href="/history">History</a> | <a href="/live">Live</a>
+
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result | AI Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background: rgba(20, 30, 48, 0.9);
+            padding: 15px 0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4ecca3;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(78, 204, 163, 0.2);
+            color: #4ecca3;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(30, 40, 60, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .result-card {
+            grid-column: 1 / -1;
+        }
+        
+        h1, h2, h3 {
+            color: #4ecca3;
+            margin-bottom: 15px;
+        }
+        
+        .status-box {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(78, 204, 163, 0.2);
+            border-radius: 30px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #4ecca3;
+        }
+        
+        /* Image Styling */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Language Buttons */
+        .language-section {
+            margin: 30px 0;
+        }
+        
+        .language-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .lang-btn {
+            background: rgba(78, 204, 163, 0.2);
+            border: 1px solid #4ecca3;
+            color: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .lang-btn:hover {
+            background: #4ecca3;
+            color: #232931;
+        }
+        
+        /* Audio Player */
+        .audio-section {
+            margin: 30px 0;
+        }
+        
+        audio {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AI Detection System</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/history">History</a>
+                <a href="/graph">Graph</a>
+                <a href="/live">Live</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="card result-card fade-in">
+            <h1>Detection Result</h1>
+            <div class="status-box">{{ status }}</div>
+            
+            <div class="info-item">
+                <span class="info-label">Reason:</span> {{ reason }}
+            </div>
+            
+            <div class="info-item">
+                <span class="info-label">Confidence:</span> {{ accuracy }}
+            </div>
+            
+            <div class="image-container">
+                <img src="{{ image }}" alt="Detection Result">
+            </div>
+        </div>
+        
+        {% if graph %}
+        <div class="card fade-in">
+            <h3>Detection Summary Graph</h3>
+            <div class="image-container">
+                <img src="{{ graph }}" alt="Detection Graph">
+            </div>
+        </div>
+        {% endif %}
+        
+        <div class="card language-section fade-in">
+            <h3>Listen in Multiple Languages</h3>
+            <form action="/play_audio" method="post">
+                <input type="hidden" name="status" value="{{ status }}">
+                <input type="hidden" name="reason" value="{{ reason }}">
+                <input type="hidden" name="accuracy" value="{{ accuracy }}">
+                
+                <div class="language-buttons">
+                    <button type="submit" name="lang" value="kn" class="lang-btn">ಕನ್ನಡ (Kannada)</button>
+                    <button type="submit" name="lang" value="en" class="lang-btn">English</button>
+                    <button type="submit" name="lang" value="hi" class="lang-btn">हिंदी (Hindi)</button>
+                    <button type="submit" name="lang" value="ta" class="lang-btn">தமிழ் (Tamil)</button>
+                    <button type="submit" name="lang" value="ml" class="lang-btn">മലയാളം (Malayalam)</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="card audio-section fade-in">
+            <h3>Audio Output</h3>
+            <audio id="audio_player" controls autoplay>
+                <source src="{{ audio }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    
+    <footer>
+        <p>AI Detection System &copy; 2023 | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
