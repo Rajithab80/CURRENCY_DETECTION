@@ -57,5 +57,5 @@ Mobile application integration
 
 Author
 
-Rajitha Reddy
+Rajitha B
 Computer Science Undergraduate | AI & Machine Learning Enthusiast
